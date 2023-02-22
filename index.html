@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <script
+      src="https://kit.fontawesome.com/9ba05cd871.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>To do List</title>
+  </head>
+  <body>
+    <main>
+      <!-- título -->
+      <div class="todo-title">
+        <h1 title="To do List">To do list</h1>
+      </div>
+
+      <!-- adicionar tarefa -->
+      <section class="add-todo">
+        <form>
+          <label title="Adicione uma tarefa"> Adicione uma tarefa </label>
+          <div class="form-control">
+            <input
+              type="text"
+              name="add"
+              id="add-todo"
+              placeholder="Criar uma nova tarefa..."
+            />
+            <button title="Adicionar" id="btn-add-todo" type="submit" class="btn-add">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- editar tarefa (display none a principio)-->
+
+      <section class="edit-todo">
+        <form>
+          <label title="Editar uma tarefa"> Editar uma tarefa </label>
+          <div class="form-control">
+            <input type="text" name="edit" id="edit-todo" />
+            <button type="submit" id="btn-edit-todo" title="Adicionar" class="btn-add">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+          <button title="Cancelar" id="btn-cancel-todo" class="btn-cancel">Cancelar</button>
+        </form>
+      </section>
+
+      <!-- pesquisar e filtrar tarefa -->
+      <section class="todo-search">
+        <div class="search">
+          <p title="Pesquisar tarefa">Pesquisar tarefa</p>
+          <form>
+            <input
+              type="text"
+              name="search"
+              id="search-todo"
+              placeholder="Buscar uma tarefa..."
+            />
+          </form>
+        </div>
+
+        <div class="filter">
+          <p title="Filtro">Filtro</p>
+          <select id="filter-select">
+            <option title="Todos" value="all">Todos</option>
+            <option title="Feitos" value="done">Feitos</option>
+            <option title="A Fazer" value="to-do">A Fazer</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- template da uma tarefa -->
+      <section class="todo">
+        <button class="btn-check-todo"><i class="fa-solid fa-check"></i></button>
+        <p>Estudar matemática a tarde</p>
+        <button class="btn-edit-todo">
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+        <button class="btn-delete-todo"><i class="fa-solid fa-xmark"></i></button>
+      </section>
+
+      <section class="todo">
+        <button class="btn-check"><i class="fa-solid fa-check"></i></button>
+        <p>Jogar lol</p>
+        <button class="btn-edit">
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+        <button class="btn-delete"><i class="fa-solid fa-xmark"></i></button>
+      </section>
+
+      <!-- paginacao das tarefas -->
+      <div class="pagination">
+        <button id="btn-previous" title="Voltar" class="btn-prev">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="page">1</div>
+        <div class="page">2</div>
+        <div class="page">3</div>
+        <button title="Avançar" id="btn-next" class="btn-next">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
